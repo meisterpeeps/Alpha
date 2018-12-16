@@ -1,0 +1,22 @@
+
+@import './colors.scss';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: $darkblue;
+    color: $somegray;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 10px;
+}
+
+.sample-rule {
+    background: black;
+}
