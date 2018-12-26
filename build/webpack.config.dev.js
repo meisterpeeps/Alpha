@@ -1,6 +1,6 @@
-const path = require('path'),
-    webpack = require('webpack'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
