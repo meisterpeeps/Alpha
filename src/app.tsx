@@ -8,7 +8,7 @@ declare let module: any
 
 
 ReactDOM.render(
-    <Greeting message = "Starter: React, Typescript, Sass, Styled-Components, Webpack, HMR, Jest, React-Testing-Library" />,
+    <Greeting message = "Hello Kat <3" />,
     document.getElementById('root')
 );
 
