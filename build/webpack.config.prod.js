@@ -7,7 +7,7 @@ module.exports = {
         app: ['./src/app.tsx', 'webpack-hot-middleware/client'],
         vendor: ['react', 'react-dom']
     },
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].bundle.js'
