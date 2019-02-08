@@ -1,5 +1,4 @@
 node_modules/
-dist/
 secrets/
 .vscode/
 stats.json
