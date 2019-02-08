@@ -6,6 +6,7 @@
   "scripts": {
     "build:dev": "./node_modules/.bin/webpack",
     "build:prod": "./node_modules/.bin/webpack",
+    "start": "node server.js",
     "dev": "npm run build:dev && node server.js",
     "stats": "./node_modules/.bin/webpack --profile --json > stats.json",
     "test": "./node_modules/.bin/jest"
