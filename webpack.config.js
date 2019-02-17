@@ -7,7 +7,7 @@ if (event === 'build:dev' || event === 'dev' || !event) {
     module.exports = require('./build/webpack.config.dev');
     console.info('--> ./build/webpack.config.dev.js');
 }
-else if (event === 'build:prod') {
+else if (event === 'build:prod' || event === 'prod') {
     module.exports = require('./build/webpack.config.prod');
     console.info('--> ./build/webpack.config.prod.js');
 }

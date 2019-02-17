@@ -1,30 +1,43 @@
-import React, {Component} from 'react';
-
-// For Information On Theming with Styled-Components and Typescript see:
-// https://www.styled-components.com/docs/api#typescript
+import React, { useEffect, useContext, useReducer} from 'react';
 import styled from 'styled-components';
-
-// Create a <Title> react component that renders an <h1> which is
-// centered, palevioletred and sized at 1.5em
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
-// Create a <Wrapper> react component that renders a <section> with
-// some padding and a papayawhip background
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-
+import { Button } from 'styled-bootstrap-components';
+import { Asteroids, asteroidsDefaultconfig } from '../asteroids/game';
+import {FirstPlot} from './charts/first';
 
 interface IProps {
     message: string;
 }
-export class Greeting extends Component<IProps, {}> {
-   render() {
-   return <Wrapper><Title>{this.props.message}</Title></Wrapper>
-   }
+export function Greeting(props: IProps){
+  
+  useEffect(() => {
+    new Asteroids(asteroidsDefaultconfig);
+  }, []);
+  
+  const { message } = props;
+  return (
+    <>
+      <Wrapper><Title>{message}</Title>
+          <Button>Hello, World!</Button>
+      </Wrapper>
+      <GameSection id = "game">
+      </GameSection>
+      <FirstPlot />
+    </>
+  );
 }
+
+
+
+// Styled Components
+var Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+var Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+var GameSection = styled.div`
+  margin-top: 15px;
+`
