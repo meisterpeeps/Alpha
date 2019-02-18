@@ -7,7 +7,7 @@ var phaser = path.join(pathToPhaser, 'dist/phaser.js');
 
 module.exports = {
     entry: {
-        app: ['./src/app.tsx', 'webpack-hot-middleware/client'],
+        app: ['./src/app.tsx'],
         vendor: ['react', 'react-dom']
     },
     mode: 'production',

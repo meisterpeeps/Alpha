@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useReducer} from 'react';
 import styled from 'styled-components';
 import { Button } from 'styled-bootstrap-components';
-import { Asteroids, asteroidsDefaultconfig } from '../asteroids/game';
+// import { Asteroids, asteroidsDefaultconfig } from '../asteroids/game';
 import {FirstPlot} from './charts/first';
 
 interface IProps {
@@ -9,9 +9,9 @@ interface IProps {
 }
 export function Greeting(props: IProps){
   
-  useEffect(() => {
-    new Asteroids(asteroidsDefaultconfig);
-  }, []);
+  // useEffect(() => {
+  //   new Asteroids(asteroidsDefaultconfig);
+  // }, []);
   
   const { message } = props;
   return (
