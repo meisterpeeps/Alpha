@@ -3,7 +3,7 @@ const express = require('express')
 const webpack = require('webpack')
 const webpackConfig = require('./webpack.config.js')
 const app = express()
-const port = process.env.PORT || 3000;
+const port = 80;
 const environment = process.env.npm_lifecycle_event; 
 
 
