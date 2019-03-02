@@ -2,9 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var pathToPhaser = path.join(__dirname, '../node_modules/phaser/');
-var phaser = path.join(pathToPhaser, 'dist/phaser.js');
-
 module.exports = {
     entry: {
         app: ['./src/app.tsx', 'webpack-hot-middleware/client'],
@@ -17,10 +14,7 @@ module.exports = {
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
-        alias: {
-            phaser: phaser
-        }
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
     },
     module: {
         rules: [
@@ -42,10 +36,6 @@ module.exports = {
                 test: /\.js$/, 
                 loader: "source-map-loader",
                 exclude: '/node_modules/' 
-            },
-            {
-                test: /phaser\.js$/, 
-                loader: 'expose-loader?Phaser'
             }
         ]
     },
