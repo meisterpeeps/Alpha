@@ -1,7 +1,6 @@
 import React, { useEffect, useContext, useReducer} from 'react';
 import styled from 'styled-components';
 import { Button } from 'styled-bootstrap-components';
-import {FirstPlot} from './charts/first';
 
 interface IProps {
     message: string;
@@ -14,9 +13,6 @@ export function Greeting(props: IProps){
       <Wrapper><Title>{message}</Title>
           <Button>Hello, World!</Button>
       </Wrapper>
-      <GameSection id = "game">
-      </GameSection>
-      <FirstPlot />
     </>
   );
 }
